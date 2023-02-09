@@ -1,20 +1,18 @@
-//1.실수형 연산자
+//3.증감연산자
 #include <stdio.h>
 int main()
 {
-	double x, y, result;
+	int x = 10, y = 10;
 
-	printf("두개의 실수를 입력하시오: ");
-	scanf("%lf %lf", &x, &y); // double형은 %lf
+	printf("x = %d\n", x); //10
+  printf("++x의 값 = %d\n", ++x); //11
+  //선 먼저 증가하고 출력 
+  printf("x = %d\n", x); //11
 
-	result = x + y;
-	printf("%.2f + %.2f = %.2f\n", x, y, result);
-	result = x - y;
-	printf("%.2f - %.2f = %.2f\n", x, y, result);
-	result = x * y;
-	printf("%.2f * %.2f = %.2f\n", x, y, result);
-	result = x / y;
-	printf("%.2f / %.2f = %.2f\n", x, y, result); 
-  //실수형 나머지 연산은 %연산자 사용불가
+  printf("y = %d\n", y); //10
+  printf("y++의 값 = %d\n", y++); //10 ->메모리 11
+  //후에 증가하고 출력
+  printf("y = %d\n", y); //11
+  
 	return 0;
 }
